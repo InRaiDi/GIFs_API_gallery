@@ -1,1 +1,1 @@
-GIFs_API_gallery
+GIF Gallery of trending gifs via GIPHY API
