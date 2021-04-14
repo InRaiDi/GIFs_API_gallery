@@ -1,0 +1,33 @@
+body{
+	margin:0;
+	padding:0;
+	background-color: #706fd3;
+}
+
+#main_container{
+	max-width: 100%;
+	display: flex;
+	flex-wrap:  wrap;
+	justify-content:center;
+  align-items:center;
+}
+.gifBlock{
+	margin:5px 20px;
+	overflow: hidden;
+    position: relative;
+}
+.gifBlock img{
+	width:100%;
+	border-radius: 5px;
+}
+.gifTitle{
+ position: absolute;
+  bottom: 5px;
+  background-color: #2c2c54;
+  width:100%;
+  text-align: center;
+  color: white;
+  padding: 5px 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius:5px;
+}
