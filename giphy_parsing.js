@@ -25,6 +25,11 @@ for (var i=0; i<Object.keys(response.data).length; i++){
         }
 
 
+$("#reload_button").click(function(){ 
+    location.reload();
+    console.log("reloaded");
+});
+
 	});
 
 
