@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
 
 
 body{
 	margin:0;
 	padding:0;
 	 background: linear-gradient(to bottom, #7927b2, #9980FA);
+	 background-image: url("asfalt-light.png"), url("always-grey.png"),linear-gradient(to bottom, #7927b2, #9980FA);
+	 min-height: 100vh;
 
 }
 
@@ -20,29 +24,31 @@ body{
 	margin:5px 20px;
 	overflow: hidden;
     position: relative;
-    -webkit-box-shadow: 2px 5px 5px 1px rgba(71, 71, 135,0.5); 
-	box-shadow: 2px 5px 5px 1px rgba(71, 71, 135,0.5); 
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius:5px;
+box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
+-webkit-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
+-moz-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
 }
 .gifBlock img{
 	width:100%;
-	border-radius: 5px;
+	transition: width 2s;
+	opacity: 0.9;
+}
+.gifBlock img:hover{
+	width:120%;
+	opacity: 1.1;
 }
 .gifTitle{
-		font-family: 'Zilla Slab Highlight', cursive;
-	font-weight: bold;
+font-family: 'Barlow', sans-serif;
  position: absolute;
-  bottom: 0px;
-  background-color: rgba(44, 44, 84,0.7);
+  bottom: 5px;
+   background: linear-gradient(to top, rgba(153, 128, 250,1), rgba(112, 111, 211,0.85));
 font-size: 16px;
-
   width:100%;
   text-align: center;
-  color: white;
+  color: #1B1464;
   padding: 5px 0px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius:5px;
 }
 #title_wrapper{
  display: flex;
@@ -66,30 +72,122 @@ height: 90px;
 	font-weight: bold;
 
 }
-#button_wrapper{
+#center_wrapper{
 	display: flex;
 justify-content: center;
 }
-#reload_button{
+.button{
 	background: #fff;
 	display: inline-block;
 	padding:10px 15px;
 	color: #7927b2;
-	margin:10px 0px; 
+	margin:10px 10px; 
 	font-family: 'Raleway', sans-serif;
 	border-radius: 3px;
 	text-transform: uppercase;
 }
-#reload_button:hover{
+.button:hover{
 -webkit-box-shadow: 2px 5px 5px 1px rgba(71, 71, 135,0.5); 
 	box-shadow: 2px 5px 5px 1px rgba(71, 71, 135,0.5); 
 	cursor: pointer;
 }
-#reload_button:active{
-background-color: rgba(153, 128, 250,1.0);
-color: #fff;
-
+.button:active{
+font-weight: bold;
+-webkit-box-shadow: 2px 7px 5px 1px rgba(71, 71, 135,0.8); 
+	box-shadow: 2px 7px 5px 1px rgba(71, 71, 135,0.8); 
 }
+#copyryght{
+	text-align: center;
+	font-family: 'Zilla Slab Highlight', cursive;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	font-size:18px;
+	margin:20px auto;
+}
+#copyryght:hover{
+letter-spacing: 3px;
+}
+/* LOADER*/
+
+.loader  {
+  animation: rotate 1s infinite;  
+  height: 50px;
+  width: 50px;
+  margin-top: 100px;
+}
+
+.loader:before,
+.loader:after {   
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 20px;  
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;  
+  background-color: #cb2025;
+  box-shadow: 30px 0 0 #f8b334;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite; 
+  background-color: #00a096;
+  box-shadow: 30px 0 0 #97bf0d;
+}
+
+@keyframes rotate {
+  0% { 
+    -webkit-transform: rotate(0deg) scale(0.8); 
+    -moz-transform: rotate(0deg) scale(0.8);
+  }
+  50% { 
+    -webkit-transform: rotate(360deg) scale(1.2); 
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% { 
+    -webkit-transform: rotate(720deg) scale(0.8); 
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #f8b334;
+  }
+  50% {
+    box-shadow: 0 0 0 #f8b334;
+    margin-bottom: 0;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #97bf0d;
+  }
+  50% {
+    box-shadow: 0 0 0 #97bf0d;
+    margin-top: -20px;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #97bf0d;
+    margin-top: 0;
+  }
+}
+.hidden{
+	display: none;
+}
+
+
 @media only screen and (max-width: 800px) {
  p{
  	height: 50px;
