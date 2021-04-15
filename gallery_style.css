@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
-
-
 body{
 	margin:0;
 	padding:0;
@@ -12,7 +10,7 @@ body{
 	 min-height: 100vh;
 
 }
-
+/* container populated with gifs*/
 #main_container{
 	max-width: 100%;
 	display: flex;
@@ -20,25 +18,29 @@ body{
 	justify-content:center;
   align-items:center;
 }
+
+/* The whole block for each gif*/
 .gifBlock{
 	margin:5px 20px;
 	overflow: hidden;
-    position: relative;
-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
--webkit-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
--moz-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
+  position: relative;
+  box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
+  -webkit-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
+  -moz-box-shadow: 12px -9px 44px -6px rgba(71,71,135,0.89);
 	border-top-left-radius: 5px;
 	border-top-right-radius:5px;
 }
-.gifBlock img{
-	width:100%;
-	transition: width 2s;
-	opacity: 0.9;
-}
-.gifBlock img:hover{
-	width:120%;
-	opacity: 1.1;
-}
+    .gifBlock img{
+    	width:100%;
+    	transition: width 2s;
+    	opacity: 0.9;
+    }
+    .gifBlock img:hover{
+    	width:120%;
+    	opacity: 1.1;
+    }
+
+/* GIF TITLE*/
 .gifTitle{
 font-family: 'Barlow', sans-serif;
  position: absolute;
@@ -50,31 +52,32 @@ font-size: 16px;
   color: #1B1464;
   padding: 5px 0px;
 }
-#title_wrapper{
- display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
+    #title_wrapper{
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
 
+    }
+    p{
+    height: 90px;
+      margin: 0 auto;
+      display: inline-block;
+      padding: 0px;
+      background: linear-gradient(to right, #7927b2, #fb3182);
+       font-size: 90px;
+      font-weight: bold;
+      color:#fff;
+      text-transform: uppercase;
+      text-align: center;
+      	font-family: 'Zilla Slab Highlight', cursive;
+    	font-weight: bold;
 }
-p{
-height: 90px;
-  margin: 0 auto;
-  display: inline-block;
-  padding: 0px;
-  background: linear-gradient(to right, #7927b2, #fb3182);
-   font-size: 90px;
-  font-weight: bold;
-  color:#fff;
-  text-transform: uppercase;
-  text-align: center;
-  	font-family: 'Zilla Slab Highlight', cursive;
-	font-weight: bold;
+/*GIF TITLE ENDS*/
 
-}
 #center_wrapper{
 	display: flex;
-justify-content: center;
+  justify-content: center;
 }
 .button{
 	background: #fff;
@@ -96,6 +99,7 @@ font-weight: bold;
 -webkit-box-shadow: 2px 7px 5px 1px rgba(71, 71, 135,0.8); 
 	box-shadow: 2px 7px 5px 1px rgba(71, 71, 135,0.8); 
 }
+
 #copyryght{
 	text-align: center;
 	font-family: 'Zilla Slab Highlight', cursive;
@@ -106,10 +110,10 @@ font-weight: bold;
 	margin:20px auto;
 }
 #copyryght:hover{
-letter-spacing: 3px;
+  letter-spacing: 3px;
 }
-/* LOADER*/
 
+/* LOADER*/
 .loader  {
   animation: rotate 1s infinite;  
   height: 50px;
