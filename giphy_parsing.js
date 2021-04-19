@@ -1,7 +1,7 @@
-
-$(function() {
 var num_gifs=20;
-function loadGifs(num_gifs) {
+var giphy_parsing = (function() {
+    "use strict"
+var loadGifs = (function (num_gifs) {
     
     $('#main_container').addClass('hidden'); //hiding gifs at first to show the loader
     $('.loader').removeClass('hidden'); // in case the page is being refreshed
@@ -42,7 +42,7 @@ function loadGifs(num_gifs) {
 
     }, 1500);
 
-}
+});
 
 loadGifs(num_gifs);
 
@@ -63,7 +63,11 @@ loadGifs(num_gifs);
 
 
 });
+$("document").ready(function () {
+    giphy_parsing();
+});
 
-
+module.exports.giphy_parsing = giphy_parsing;
+module.exports.loadGifs = loadGifs;
 
 

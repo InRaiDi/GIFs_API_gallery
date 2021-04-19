@@ -1,0 +1,29 @@
+{
+  "name": "GIFs_API_gallery",
+  "version": "1.0.0",
+  "description": "GIF Gallery of trending gifs via GIPHY API",
+  "main": "giphy_parsing.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InRaiDi/GIFs_API_gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InRaiDi/GIFs_API_gallery/issues"
+  },
+  "homepage": "https://github.com/InRaiDi/GIFs_API_gallery#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  },
+  "devDependencies": {
+    "jquery": "^3.6.0",
+    "jsdom": "16.5.3",
+    "jsdom-global": "3.0.2"
+  }
+}
