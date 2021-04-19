@@ -4,8 +4,12 @@
 - jQuery (no installation required to run app, but required for testing)<br>
 - MochaJS for testing (installation required: <u>npm install mocha<u>)<br>
 - JSDOM for testing (installation required: <u>npm install --save-dev --save-exact jsdom jsdom-global</u>)<br>
-- ChaiJS for testing (installation required: <u>npm install chai)</u>)<
+- ChaiJS for testing (installation required: <u>npm install chai)</u>)<br>
+<hr>
 <b>To run the test:</b> <u>npm test</u><br>
+- 4 tests overall;<br>
+- Testing script is in the folder "test" - test.js;<br>
+- Results of the test you can find in the folder "test" - "TestingResults.png".
 <b>API:</b> by GIPHY<br>
 Working application is at <a href=http://inraidi.com/GIFs_gallery/>http://inraidi.com/GIFs_gallery/</a><br>
 <b>How to use:</b><br>
