@@ -6,8 +6,9 @@ global.window = window
 global.$ = require('jquery');
 
 var gp = require('../giphy_parsing.js');
-giphy_parsing=gp.giphy_parsing;
 loadGifs=gp.loadGifs;
+load_more=gp.load_more;
+refresh=gp.refresh;
 
 describe('#opening_page', function() {
     before(function () {
@@ -43,14 +44,14 @@ describe('#returning_data', function() {
     context('without arguments', function() {
     
         it('should return data', function() {
-        expect(giphy_parsing()).to.not.equal(null);
+        expect(loadGifs()).to.not.equal(null);
       })
     })
     
 });
 
 
-describe('#returning_data_gif', function() {
+describe('#loading_more', function() {
     before(function () {
         this.jsdom = require('jsdom-global')()
       })
@@ -62,10 +63,30 @@ describe('#returning_data_gif', function() {
     context('without arguments', function() {
     
         it('should return data', function() {
-        expect(loadGifs()).to.not.equal(null);
+        expect(load_more()).to.not.equal(null);
       })
     })
     
 });
+
+
+describe('#refreshing', function() {
+    before(function () {
+        this.jsdom = require('jsdom-global')()
+      })
+      
+      after(function () {
+        this.jsdom()
+      })
+
+    context('without arguments', function() {
+    
+        it('should return data', function() {
+        expect(refresh()).to.not.equal(null);
+      })
+    })
+    
+});
+
 
     

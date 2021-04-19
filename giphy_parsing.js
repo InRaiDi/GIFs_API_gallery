@@ -1,8 +1,7 @@
 var num_gifs=20;
-var giphy_parsing = (function() {
-    "use strict"
 var loadGifs = (function (num_gifs) {
-    
+    "use strict"
+
     $('#main_container').addClass('hidden'); //hiding gifs at first to show the loader
     $('.loader').removeClass('hidden'); // in case the page is being refreshed
 
@@ -42,32 +41,38 @@ var loadGifs = (function (num_gifs) {
 
     }, 1500);
 
-});
-
-loadGifs(num_gifs);
 
 // reloading the gifs without refreshing the page
- $("#refresh_button").click(function(){ 
-            $( "#main_container" ).empty();
-            loadGifs(num_gifs);
-            console.log("reloaded");
-        });
+    $("#refresh_button").click(function(){ 
+        refresh();
+    });
 
-// loading more gifs without refreshing the page (due to API restrictions it'll upload up to 50 gifs)
- $("#load_more").click(function(){ 
-            $( "#main_container" ).empty();
-            num_gifs+=10;
-            loadGifs(num_gifs);
-            console.log("reloaded");
-        });
-
+    // loading more gifs without refreshing the page (due to API restrictions it'll upload up to 50 gifs)
+    $("#load_more").click(function(){ 
+                load_more();
+    });
 
 });
+
+var load_more=(function () {
+    $( "#main_container" ).empty();
+    num_gifs+=10;
+    loadGifs(num_gifs);
+    console.log("loaded more");
+
+});
+var refresh=(function () {
+    $( "#main_container" ).empty();
+    loadGifs(num_gifs);
+    console.log("reloaded");
+
+});
+
+
 $("document").ready(function () {
-    giphy_parsing();
+    loadGifs(num_gifs);
 });
-
-module.exports.giphy_parsing = giphy_parsing;
 module.exports.loadGifs = loadGifs;
-
+module.exports.load_more = load_more;
+module.exports.refresh = refresh;
 
